@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Importância da Água</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0faff;
+            color: #17364a;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #087ca7;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 36px;
+        }
+
+        nav {
+            background: #075985;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #9eeaff;
+        }
+
+        .principal {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #38bdf8, #087ca7);
+            color: white;
+        }
+
+        .principal h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .principal p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        section {
+            padding: 45px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #087ca7;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .cartoes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .cartao {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        .cartao h3 {
+            color: #087ca7;
+            margin: 12px 0;
+        }
+
+        .icone {
+            font-size: 40px;
+        }
+
+        .dicas {
+            background: #dff7ff;
+            padding: 40px 25px;
+            border-radius: 15px;
+        }
+
+        .dicas ul {
+            max-width: 650px;
+            margin: auto;
+            padding-left: 25px;
+        }
+
+        .dicas li {
+            margin: 12px 0;
+        }
+
+        .botao {
+            display: block;
+            margin: 25px auto 0;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 10px;
+            background: #087ca7;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background: #075985;
+        }
+
+        #mensagem {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #075985;
+        }
+
+        footer {
+            background: #073b5c;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            .cartoes {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>💧 Água é Vida</h1>
+        <p>Cuide da sua saúde, beba água!</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#dicas">Dicas</a>
+    </nav>
+
+    <div class="principal" id="inicio">
+        <h2>A importância de tomar água</h2>
+        <p>
+            A água é essencial para a vida e para o funcionamento
+            do nosso organismo. Beber água regularmente ajuda a
+            manter o corpo hidratado e saudável.
+        </p>
+    </div>
+
+    <section id="beneficios">
+        <h2>Benefícios de beber água</h2>
+
+        <div class="cartoes">
+
+            <div class="cartao">
+                <div class="icone">🌡️</div>
+                <h3>Regula a temperatura</h3>
+                <p>
+                    A água ajuda o corpo a controlar sua temperatura,
+                    principalmente nos dias quentes.
+                </p>
+            </div>
+
+            <div class="cartao">
+                <div class="icone">🧠</div>
+                <h3>Ajuda o organismo</h3>
+                <p>
+                    A hidratação adequada contribui para o funcionamento
+                    normal do cérebro e do corpo.
+                </p>
+            </div>
+
+            <div class="cartao">
+                <div class="icone">🍎</div>
+                <h3>Ajuda na digestão</h3>
+                <p>
+                    A água participa da digestão e ajuda o intestino
+                    a funcionar adequadamente.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="dicas">
+        <div class="dicas">
+            <h2>Dicas para beber mais água</h2>
+
+            <ul>
+                <li>Tenha sempre uma garrafa de água por perto.</li>
+                <li>Beba água ao longo do dia.</li>
+                <li>Não espere sentir muita sede para se hidratar.</li>
+                <li>Beba água antes, durante e depois de exercícios.</li>
+                <li>Preste atenção à hidratação nos dias quentes.</li>
+            </ul>
+
+            <button class="botao" onclick="mostrarMensagem()">
+                Quero me hidratar!
+            </button>
+
+            <p id="mensagem"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>💧 Água é Vida — Sua saúde merece esse cuidado!</p>
+        <p>Projeto educativo sobre a importância da hidratação.</p>
+    </footer>
+
+    <script>
+        function mostrarMensagem() {
+            document.getElementById("mensagem").textContent =
+                "Muito bem! Lembre-se de beber água ao longo do dia! 💧";
+        }
+    </script>
+
+</body>
+</html>
